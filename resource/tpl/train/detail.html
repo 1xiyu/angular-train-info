@@ -1,0 +1,139 @@
+<style>
+.headerline {
+	border-top: 1px solid #bbbbbb;
+}
+
+.detail-code {
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  border: solid 1px #009966;
+  border-radius: 4px;
+  background: #339933;
+  color: #FFF;
+  font-weight: 700;
+  padding: 0 10px 0 10px;
+  position: absolute;
+  top: -12px;
+  line-height: 24px;
+  z-index: 2;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+#price-input {
+	display: inline-block;
+	width: 60px;
+}
+
+table {
+	line-height: 30px;
+}
+
+table tbody {
+	border-top: solid 1px #AAAAAA;
+	border-bottom: solid 1px #AAAAAA;
+}
+
+table .br-l {
+	border-left: solid 1px #cccccc;
+}
+
+table .br-r {
+	border-right: solid 1px #cccccc;
+}
+
+table td {
+	padding: 10px 0;
+}
+
+table .passStation {
+	position: relative;
+}
+
+table .passCicle {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	border: solid 1px #BBBBBB;
+	background: #FFFFFF;
+	bottom: -8px;
+	right: -23px;
+}
+
+table tr:hover {
+	cursor: pointer;
+}
+
+table tr:hover .passCicle {
+	background: #339933;
+}
+
+table tr:hover .passPrice, table tr:hover .passStation {
+	font-size: 20px;
+}
+
+</style>
+
+<div class="row mt-20">
+	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center f16">
+			<div class="headerline">
+				<div class="content text-bold">
+					<span ng-bind="data.origin"></span>
+				</div>
+				<div class="detail-code text-center text-code">
+					<span ng-bind="data.code"></span>
+				</div>
+				<div class="content text-bold" style="right: 0;left: auto;">{{data.terminal}}</div>
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center f16">
+			<div class="pull-left pl-10">
+				<span ng-bind="data.originTime"></span>
+			</div>
+			<div class="pull-right pr-10">
+				<span ng-bind="data.terminalTime"></span>
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center f16">
+				<span class="text-light f14">
+					<span ng-bind="data.type"></span>
+				</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-num text-success text-bold f18">
+					¥<span ng-bind="data.price" ng-show="!editing"></span>
+					<input ng-show="editing" type="text" id="price-input" class="form-control input-sm" ng-model="newPrice"/>
+				</span>
+				<a ng-show="!editing" ng-click="edit()" class="text-info f12">修改</a>
+				<span ng-show="editing">
+					<a ng-click="cancle()" class="text-muted f12">取消</a> <a ng-click="save()" class="text-success f12">保存</a>
+				</span>
+		</div>
+	</div>
+</div>
+<div class="row mt-20 mb-20">
+	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<table class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 text-center">
+			<thead>
+				<th colspan="2" class="text-center">途经 <span ng-bind="data.pass.length"></span> 个站点</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="p in data.pass">
+					<td class="col-md-6 text-right br-r">
+						<div class="text-bold text-danger f14 passStation"><span ng-bind="p.station"></span>
+							<div class="passCicle"></div>
+						</div>
+						<div class="text-light f12">到站：<span ng-bind="p.time"></span></div>
+					</td>
+					<td class="col-md-6 text-left br-l">
+						<div class="text-num text-bold text-success f14 passPrice">¥<span ng-bind="p.price"></span></div>
+						<div class="text-light f12">停留<span ng-bind="p.stay"></span>分钟</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

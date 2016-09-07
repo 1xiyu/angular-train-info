@@ -1,0 +1,64 @@
+<style>
+	.search {
+		margin-top: 20px;
+	}
+	
+	.list:hover {
+		background: #EEEEEE;
+		cursor: pointer;
+	}
+	
+	.button {
+		margin-bottom: 20px;
+	}
+</style>
+<div class="row mt-20">
+	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<div class="form-group form-group-sm has-feedback">
+			<input class="form-control" placeholder="输入关键词进行筛选">
+			<span class="form-control-feedback text-simple"><i class="fa fa-search"></i></span>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<ul class="list-group ">
+			<li class="list-group-item active text-center text-bold">
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3">车次</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">起点</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">终点</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">票价</div>
+				</div>
+			</li>
+			<a class="list-group-item list" ng-repeat="train in data.content" href="#/detail/{{train.id}}">
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3 text-center text-code f16 text-bold" style="line-height: 40px;">
+						<span ng-bind="train.code"></span>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<div class="text-center"><span ng-bind="train.origin"></span></div>
+						<div class="text-num text-muted"><span ng-bind="train.originTime"></span></div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<div class="text-center"><span ng-bind="train.terminal"></span></div>
+						<div class="text-num text-muted"><span ng-bind="train.terminalTime"></span></div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 text-center" style="line-height: 40px;">
+						<div class="text-num text-success text-bold f16">¥<span ng-bind="train.price"></span></div>
+					</div>
+				</div>
+			</a>
+		</ul>
+	</div>
+</div>
+
+<div class="row mb-20">
+	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+			<a ng-disabled="data.first" class="btn btn-default col-md-2 col-sm-3 col-xs-4" href="#/index/{{data.pre}}">上一页</a>
+			<div class="col-md-8 col-sm-6 col-xs-4 text-center f14" style="line-height: 34px;">
+				<span ng-bind="data.page"></span>/<span ng-bind="data.totalPage"></span>页</div>
+			<a ng-disabled="data.last" class="btn btn-default col-md-2 col-sm-3 col-xs-4" href="#/index/{{data.next}}">下一页</a>
+	</div>
+</div>

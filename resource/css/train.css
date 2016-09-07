@@ -1,0 +1,129 @@
+/* common */
+.text-shadow {
+	text-shadow: 5px 5px 5px #000000;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-code {
+	font-family: 'Verdana';
+}
+
+.text-num {
+	font-style: normal;
+	font-family: verdana;
+}
+
+.text-muted {
+	color: #888 !important;
+}
+
+.text-light {
+	color: #666;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f18 {
+	font-size: 18px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.pl-20 {
+	padding-left: 20px;
+}
+
+.pr-20 {
+	padding-right: 20px;
+}
+
+.pl-10 {
+	padding-left: 10px;
+}
+
+.pr-10 {
+	padding-right: 10px;
+}
+a[ng-click] {
+	cursor: pointer;
+}
+#top {
+	height: 180px;
+	background: url(../img/bg_blue.png) left center;
+	margin-bottom: 0px;
+}
+
+#top .container {
+	color: #FFF;
+	font-weight: 700;
+	font-family: '楷体';
+}
+
+#top h1>a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#top h1>a:HOVER {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+#footer {
+	width: 100%;
+	height: 80px;
+	background: #333;
+	line-height: 70px;
+	color: #aaa;
+}
+.headerline {
+	font-size: 18px;
+  	font-family: Microsoft YaHei,SimHei,Verdana;
+  	font-weight: 500;
+  	line-height: 22px;
+  	margin: 25px 0;
+  	clear: both;
+  	zoom: 1;
+  	border-top: 1px solid #eee;
+  	position: relative;
+}
+
+.headerline .content {
+	position: absolute;
+	top: -12px;
+	left: 0;
+	line-height: 24px;
+  	padding: 0 15px 0 10px;
+  	background: #fff;
+  	z-index: 2;
+}
+
+.headerline .end {
+	position: absolute;
+	top: -12px;
+	right: 0;
+	line-height: 24px;
+  	padding-left: 15px;
+  	background: #fff;
+  	z-index: 2;
+}

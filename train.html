@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=-1">
+	<title>列车信息系统</title>
+</head>
+<link href="resource/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="resource/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="resource/css/train.css" rel="stylesheet">
+<link href="resource/img/icon/u.png" rel="icon" type="image/x-icon">
+<body ng-app="MyApp">
+	<!-- header Start -->
+	<nav id="top" class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<br>
+					<br>
+					<h1>
+						<a href="#/index/1" class="text-shadow"><i class="fa fa-subway"></i> 列车信息系统</a>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- header End -->
+	
+	<div class="container">
+		<!-- Todo 优化 ng-Animation 动画效果 -->
+		<div ui-view></div>
+	</div>
+	
+	<!-- footer satar -->
+	<div class="navbar" id="footer">
+		<p class="text-center">
+			© 2015/07/08 列车信息系统示例  By Suntg
+		</p>
+	</div>
+	<!-- footer end -->
+</body>
+<script type="text/javascript" src="resource/lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="resource/lib/angular/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="resource/js/train/app.js"></script>
+</html>

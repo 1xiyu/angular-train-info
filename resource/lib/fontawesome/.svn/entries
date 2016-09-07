@@ -1,0 +1,34 @@
+10
+
+dir
+1173
+svn://192.168.253.111/platform/platform-b2b/src/main/webapp/resources/lib/fontawesome
+svn://192.168.253.111/platform
+
+
+
+2015-04-28T03:32:30.578417Z
+613
+suntg
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f3bf4e98-0cf0-11e4-a00c-a99a8b9d557d
+
+css
+dir
+
+fonts
+dir
+

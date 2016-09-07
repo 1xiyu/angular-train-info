@@ -1,0 +1,74 @@
+10
+
+dir
+1173
+svn://192.168.253.111/platform/platform-b2b/src/main/webapp/resources/lib
+svn://192.168.253.111/platform
+
+
+
+2015-06-16T13:03:44.735789Z
+1105
+shenj
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f3bf4e98-0cf0-11e4-a00c-a99a8b9d557d
+
+angular
+dir
+
+bootstrap
+dir
+
+fontawesome
+dir
+
+jquery
+dir
+
+require.js
+file
+
+
+
+
+2015-05-15T07:11:28.880000Z
+8d497e7c6adaa68523deba3eac5cb006
+2015-01-06T13:40:19.881116Z
+101
+administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15164
+
